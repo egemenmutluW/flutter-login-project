@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:loginuicolors/login.dart';
 
 class MyRegister extends StatefulWidget {
   const MyRegister({Key? key}) : super(key: key);
@@ -129,7 +130,9 @@ class _MyRegisterState extends State<MyRegister> {
                                 backgroundColor: Color(0xff4c505b),
                                 child: IconButton(
                                     color: Colors.white,
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      Navigator.pushNamed(context, 'login');
+                                    },
                                     icon: Icon(
                                       Icons.arrow_forward,
                                     )),
@@ -145,6 +148,7 @@ class _MyRegisterState extends State<MyRegister> {
                               TextButton(
                                 onPressed: () {
                                   Navigator.pushNamed(context, 'login');
+                                  // Navigator.of(context).push(_createRoute());
                                 },
                                 child: Text(
                                   'Sign In',
@@ -171,3 +175,12 @@ class _MyRegisterState extends State<MyRegister> {
     );
   }
 }
+
+// Route _createRoute() {
+//   return PageRouteBuilder(
+//     pageBuilder: (context, animation, secondaryAnimation) => const MyLogin(),
+//     transitionsBuilder: (context, animation, secondaryAnimation, child) {
+//       return child;
+//     },
+//   );
+// }

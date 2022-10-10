@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:loginuicolors/register.dart';
+import 'main.dart';
 
 class MyLogin extends StatefulWidget {
   const MyLogin({Key? key}) : super(key: key);
@@ -78,7 +80,12 @@ class _MyLoginState extends State<MyLogin> {
                                 backgroundColor: Color(0xff4c505b),
                                 child: IconButton(
                                     color: Colors.white,
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => MyRegister()));
+                                    },
                                     icon: Icon(
                                       Icons.arrow_forward,
                                     )),
